@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import {retry} from 'rxjs/operators'
 
 @Component({
-  selector: 'app-rxjs',
-  templateUrl: './rxjs.component.html',
-  styleUrls: ['./rxjs.component.css']
+  selector: 'app-observable-retry',
+  templateUrl: './observable-retry.component.html',
+  styleUrls: ['./observable-retry.component.css']
 })
-export class RxjsComponent   {
+export class ObservableRetryComponent  {
 
   constructor() { 
 
-   
+    let i = 0;
 
 // Vamos a crear un Observable manualmente
     const  obs$ = new Observable( observer =>{
 
-      let i = 0;
+
      const intervalo = setInterval( () =>{
         
        i++;
@@ -27,6 +28,7 @@ export class RxjsComponent   {
        }
 
        if (i===2){
+         console.log("i = 2 ....error");
          observer.error ('i llego a 2');
        }
         
@@ -37,7 +39,9 @@ export class RxjsComponent   {
   });
 
 
-  obs$.subscribe(
+  obs$.pipe(
+    retry(1)  // Lo intentaria unicamente una vez
+  ).subscribe(
     valor => console.log("subs", valor),
     (err) => console.warn('Error:', err ),
     () =>  console.info('Obs terminado')
