@@ -9,6 +9,7 @@ import { ObservableRetryComponent } from './observable-retry/observable-retry.co
 import { FuncionObservableComponent } from './funcion-observable/funcion-observable.component';
 import { ObservableMapComponent } from './observable-map/observable-map.component';
 import { ObservableFilterComponent } from './observable-filter/observable-filter.component';
+import { ObservableUnsubscribeComponent } from './observable-unsubscribe/observable-unsubscribe.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ObservableFilterComponent } from './observable-filter/observable-filter
     ObservableRetryComponent,
     FuncionObservableComponent,
     ObservableMapComponent,
-    ObservableFilterComponent
+    ObservableFilterComponent,
+    ObservableUnsubscribeComponent
   ],
   imports: [
     BrowserModule
