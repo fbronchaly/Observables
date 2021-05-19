@@ -6,6 +6,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { PromesasFuncionesComponent } from './promesas-funciones/promesas-funciones.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ObservableRetryComponent } from './observable-retry/observable-retry.component';
+import { FuncionObservableComponent } from './funcion-observable/funcion-observable.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ObservableRetryComponent } from './observable-retry/observable-retry.co
     PromesasComponent,
     PromesasFuncionesComponent,
     RxjsComponent,
-    ObservableRetryComponent
+    ObservableRetryComponent,
+    FuncionObservableComponent
   ],
   imports: [
     BrowserModule
