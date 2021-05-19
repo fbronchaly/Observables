@@ -8,6 +8,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { ObservableRetryComponent } from './observable-retry/observable-retry.component';
 import { FuncionObservableComponent } from './funcion-observable/funcion-observable.component';
 import { ObservableMapComponent } from './observable-map/observable-map.component';
+import { ObservableFilterComponent } from './observable-filter/observable-filter.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ObservableMapComponent } from './observable-map/observable-map.componen
     RxjsComponent,
     ObservableRetryComponent,
     FuncionObservableComponent,
-    ObservableMapComponent
+    ObservableMapComponent,
+    ObservableFilterComponent
   ],
   imports: [
     BrowserModule
